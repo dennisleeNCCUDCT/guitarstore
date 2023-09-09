@@ -101,14 +101,17 @@ function ProductModal({ closeProductModal, getProducts, type, tempProduct }) {
                   </label>
                 </div>
                 <div className="form-group mb-2">
-                  <label className="w-100" htmlFor="customFile">
-                    或 上傳圖片
-                    <input
-                      type="file"
-                      id="customFile"
-                      className="form-control"
-                    />
-                  </label>
+                  <form
+                    action="/api/dennis-lee/admin/upload"
+                    enctype="multipart/form-data"
+                    method="post"
+                  >
+                    <label className="w-100" htmlFor="customFile">
+                      或 上傳圖片
+                    </label>
+                    <input type="file" name="file-to-upload" />
+                    <input type="submit" value="Upload" />
+                  </form>
                 </div>
                 <img src="" alt="" className="img-fluid" />
               </div>
