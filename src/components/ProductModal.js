@@ -96,6 +96,7 @@ function ProductModal({ closeProductModal, getProducts, type, tempProduct }) {
                       name="imageUrl"
                       id="image"
                       placeholder="請輸入圖片連結"
+                      onChange={handleChange}
                       className="form-control"
                     />
                   </label>
